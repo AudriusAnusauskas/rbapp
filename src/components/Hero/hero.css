@@ -74,7 +74,14 @@ img {
     display: none;
   }
   .quote {
-    position: relative;
-    bottom: 250px;
+    font-size: 11px;
+    width: 220px;
+    line-height: normal;
+    position: absolute;
+    top: 530px;
+    left: 20px;
+  }
+  .quote p span {
+    margin-left: 200px;
   }
 }
