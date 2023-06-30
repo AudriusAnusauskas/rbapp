@@ -1,0 +1,12 @@
+.navbar {
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  width: 313px;
+  color: #ffffff;
+}
+.logo p span {
+  color: #019eb5;
+}
