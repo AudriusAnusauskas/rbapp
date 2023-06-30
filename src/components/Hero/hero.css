@@ -1,7 +1,7 @@
 .hero {
   display: flex;
   justify-content: center;
-  background-color: #09090b;
+  height: fit-content;
 }
 img {
   width: 100%;
@@ -14,9 +14,6 @@ img {
   max-width: 1440px;
 }
 
-.img834 {
-  display: none;
-}
 .img390 {
   display: none;
 }
@@ -41,17 +38,10 @@ img {
 }
 
 @media screen and (max-width: 1300px) {
-  .img834 {
-    max-width: 834px;
-    display: block;
-  }
-  .img1440 {
-    display: none;
-  }
   .quote {
     position: absolute;
     top: 225px;
-    left: 30px;
+    left: 140px;
     font-size: 15px;
     width: 420px;
     letter-spacing: 5.4px;
@@ -61,27 +51,23 @@ img {
     margin-left: 260px;
   }
 }
+@media screen and (max-width: 900px) {
+  .quote {
+    font-size: 13px;
+    width: 400px;
+    letter-spacing: 5.4px;
+  }
+  .quote p span {
+    margin-left: 240px;
+  }
+}
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 780px) {
   .img390 {
     max-width: 390px;
     display: block;
   }
-  .img834 {
-    display: none;
-  }
   .img1440 {
     display: none;
-  }
-  .quote {
-    font-size: 11px;
-    width: 220px;
-    line-height: normal;
-    position: absolute;
-    top: 530px;
-    left: 20px;
-  }
-  .quote p span {
-    margin-left: 200px;
   }
 }
