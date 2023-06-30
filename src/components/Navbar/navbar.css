@@ -21,7 +21,6 @@
   font-weight: 500;
   line-height: 0px;
   letter-spacing: 3.2px;
-  /* margin: 0; */
 }
 .logo-lower {
   color: #fff;
@@ -30,7 +29,6 @@
   font-weight: 200;
   line-height: 0px;
   letter-spacing: 11.52px;
-  /* margin: 0; */
 }
 .logo p span {
   color: #019eb5;
@@ -50,15 +48,50 @@ ul {
 li:hover {
   cursor: pointer;
   color: #019eb5;
-  margin-bottom: -4px;
-  padding-bottom: 3px;
-  border-bottom: 1px solid #019eb5;
+  margin-bottom: -5px;
+  padding-bottom: 5px;
+  /* border-bottom: 1px solid #019eb5; */
+  transition: all 0.5s ease;
+}
+li:not(:hover) {
+  transition: all 0.5s ease;
+}
+
+.menu-sidebar {
+  margin-top: 50px;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 @media screen and (max-width: 1300px) {
+  .logo {
+    width: 238px;
+  }
   .logo-lower,
   .logo-upper {
-    font-size: 24px;
+    font-size: 22px;
+  }
+  .logo-lower {
+    letter-spacing: 9.1px;
+  }
+  ul {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .navbar {
+    padding: 0 20px;
+  }
+  .logo {
+    width: 190px;
+  }
+  .logo-lower,
+  .logo-upper {
+    font-size: 18px;
+  }
+  .logo-lower {
+    letter-spacing: 7.9px;
   }
   ul {
     font-size: 16px;

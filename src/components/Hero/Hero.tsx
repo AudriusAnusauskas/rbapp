@@ -17,7 +17,7 @@ const Hero: React.FunctionComponent = () => {
         const text = element.querySelector(".quote") as HTMLElement;
 
         image.style.transform = `translateY(${scrollTop * speed}px )`;
-        text.style.transform = `translateY(${scrollTop * (speed * 0.5)}px)`;
+        text.style.transform = `translateY(${scrollTop * (speed * 0.25)}px)`;
       }
     };
 
@@ -33,14 +33,15 @@ const Hero: React.FunctionComponent = () => {
         <img src={Img1440} alt="Ramune" />
         <div className="quote">
           <p>
-            "Kritikas turi gebėti atpažinti ir įvertinti teatro magiją,
-            neapsiribojant tik analize ir kritika." <br />
+            Kritikas turi gebėti atpažinti ir įvertinti teatro magiją,
+            neapsiribodamas tik analize ir kritika. <br />
             <span> - Helen Mirren</span>
           </p>
         </div>
       </div>
 
       <div className="img img390">
+        <Navbar />
         <img src={Img390} alt="Ramune" />
       </div>
     </section>

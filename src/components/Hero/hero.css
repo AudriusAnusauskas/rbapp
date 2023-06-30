@@ -1,7 +1,6 @@
 .hero {
   display: flex;
   justify-content: center;
-  /* height: 100%; */
   overflow: hidden;
 }
 img {
@@ -52,16 +51,6 @@ img {
     margin-left: 230px;
   }
 }
-/* @media screen and (max-width: 900px) {
-  .quote {
-    font-size: 13px;
-    width: 400px;
-    letter-spacing: 5.4px;
-  }
-  .quote p span {
-    margin-left: 240px;
-  }
-} */
 
 @media screen and (max-width: 900px) {
   .img390 {
