@@ -5,10 +5,10 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="logo">
-        <p>
+        <p className="logo-upper">
           Ramunė<span>Balevičiūtė</span>
         </p>
-        <p>Teatro kritikė</p>
+        <p className="logo-lower">Teatro kritikė</p>
       </div>
       <div className="menu">
         <ul>

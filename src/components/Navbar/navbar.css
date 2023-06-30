@@ -1,12 +1,60 @@
 .navbar {
+  padding: 0 140px;
+  font-family: Oswald;
   max-width: 1440px;
   display: flex;
   justify-content: space-between;
+  background-color: #09090b;
+  align-items: center;
 }
 .logo {
   width: 313px;
   color: #ffffff;
 }
+.logo-upper {
+  color: #fff;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 0px;
+  letter-spacing: 3.2px;
+  /* margin: 0; */
+}
+.logo-lower {
+  color: #fff;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 0px;
+  letter-spacing: 11.52px;
+  /* margin: 0; */
+}
 .logo p span {
   color: #019eb5;
+}
+ul {
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 33px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 12px;
+  letter-spacing: 5.04px;
+}
+li:hover {
+  cursor: pointer;
+  color: #019eb5;
+  margin-bottom: -4px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #019eb5;
+}
+
+@media screen and (max-width: 1300px) {
+  .logo-lower,
+  .logo-upper {
+    font-size: 24px;
+  }
 }
