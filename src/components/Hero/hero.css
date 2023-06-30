@@ -1,7 +1,8 @@
 .hero {
   display: flex;
   justify-content: center;
-  height: fit-content;
+  /* height: 100%; */
+  overflow: hidden;
 }
 img {
   width: 100%;
@@ -42,16 +43,16 @@ img {
     position: absolute;
     top: 225px;
     left: 140px;
-    font-size: 15px;
+    font-size: 18px;
     width: 420px;
     letter-spacing: 5.4px;
   }
   .quote p span {
     color: #019eb5;
-    margin-left: 260px;
+    margin-left: 230px;
   }
 }
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
   .quote {
     font-size: 13px;
     width: 400px;
@@ -60,9 +61,9 @@ img {
   .quote p span {
     margin-left: 240px;
   }
-}
+} */
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 900px) {
   .img390 {
     max-width: 390px;
     display: block;

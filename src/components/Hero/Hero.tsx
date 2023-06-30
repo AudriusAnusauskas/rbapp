@@ -16,7 +16,7 @@ const Hero: React.FunctionComponent = () => {
         const image = element.querySelector(".img") as HTMLElement;
         const text = element.querySelector(".quote") as HTMLElement;
 
-        image.style.transform = `translateY(${scrollTop * speed}px)`;
+        image.style.transform = `translateY(${scrollTop * speed}px )`;
         text.style.transform = `translateY(${scrollTop * (speed * 0.5)}px)`;
       }
     };
