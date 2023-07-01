@@ -15,7 +15,7 @@ h2 {
   line-height: 35px;
   letter-spacing: 19.2px;
 }
-p {
+.about p {
   font-size: 20;
   font-style: normal;
   font-weight: 200;
@@ -38,7 +38,7 @@ p {
 .bottom :nth-child(2) {
   border-bottom: 2px solid #019eb5;
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1200px) {
   .about {
     margin-top: -5px;
     padding: 30px 120px;
@@ -49,14 +49,14 @@ p {
   .about p {
     font-size: 18px;
     line-height: 35px;
-    letter-spacing: 7.2px;
+    letter-spacing: 5.2px;
   }
   .about p span {
     font-size: 28px;
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 660px) {
   .about {
     padding: 30px;
     max-width: 390px;

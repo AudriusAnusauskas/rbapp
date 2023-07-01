@@ -39,7 +39,9 @@ const Navbar = () => {
           />
         ) : (
           <ul>
-            <li>Apie</li>
+            <li>
+              <a href="#about">Apie</a>
+            </li>
             <li>Tyrimai</li>
             <li>Straipsniai</li>
             <li>Knygos</li>
@@ -49,7 +51,9 @@ const Navbar = () => {
         {isSidebarVisible && (
           <Sidebar onBackdropClick={closeSidebar}>
             <ul className="menu-sidebar">
-              <li>Apie</li>
+              <li>
+                <a href="#about">Apie</a>
+              </li>
               <li>Tyrimai</li>
               <li>Straipsniai</li>
               <li>Knygos</li>

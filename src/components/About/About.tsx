@@ -3,7 +3,7 @@ import "./about.css";
 
 const About = () => {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <h2>Apie</h2>
       <p>
         <span>Dr. Ramunė Balevičiūtė</span> yra teatro kritikė ir tyrėja, knygų

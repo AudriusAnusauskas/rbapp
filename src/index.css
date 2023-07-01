@@ -3,6 +3,13 @@
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  all: unset;
+}
 body {
   margin: 0;
   font-family: "Oswald";

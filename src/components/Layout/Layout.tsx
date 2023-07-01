@@ -1,4 +1,5 @@
 import About from "../About/About";
+import Footer from "../Footer/Footer";
 import Hero from "../Hero/Hero";
 
 const Layout: React.FunctionComponent = () => {
@@ -6,6 +7,7 @@ const Layout: React.FunctionComponent = () => {
     <div>
       <Hero />
       <About />
+      <Footer />
     </div>
   );
 };
