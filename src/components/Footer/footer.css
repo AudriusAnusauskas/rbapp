@@ -12,6 +12,9 @@
   display: flex;
   gap: 30px;
 }
+.social a {
+  cursor: pointer;
+}
 .credits {
   color: #fff;
 }
