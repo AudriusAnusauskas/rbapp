@@ -7,16 +7,22 @@ const Footer: React.FunctionComponent = () => {
   return (
     <section className="footer">
       <div className="social">
-        <a href="https://www.facebook.com/ramune.baleviciute">
+        <a target="blank" href="https://www.facebook.com/ramune.baleviciute">
           <Facebook className="icons" />
         </a>
-        <a href="https://instagram.com/ramune.bale?igshid=MzRlODBiNWFlZA==">
+        <a
+          target="blank"
+          href="https://instagram.com/ramune.bale?igshid=MzRlODBiNWFlZA=="
+        >
           <Instagram className="icons" />
         </a>
       </div>
       <div className="credits">
         <p>
-          Made by <a href="https://anusauskas.com/">anusauskas.com</a>
+          Made by{" "}
+          <a target="blank" href="https://anusauskas.com/">
+            anusauskas.com
+          </a>
         </p>
         <p>Nuotrauka: Dainius Putinas</p>
       </div>
