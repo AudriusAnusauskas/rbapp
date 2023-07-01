@@ -12,6 +12,7 @@ const HamburgerButton = ({ isActive, onClick }: Props): JSX.Element => {
   return (
     <div
       className={classNames("hamburger", {
+        // eslint-disable-next-line
         ["active"]: isActive,
       })}
       onClick={onClick}

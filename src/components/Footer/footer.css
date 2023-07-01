@@ -1,0 +1,57 @@
+.footer {
+  background-color: #1c2025;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 60px 239px;
+}
+
+.social {
+  display: flex;
+  gap: 30px;
+}
+.credits {
+  color: #fff;
+}
+.credits p {
+  line-height: 10px;
+  color: #767676;
+  font-size: 14px;
+  letter-spacing: 3.22px;
+}
+.credits p a {
+  cursor: pointer;
+  color: #019eb5;
+}
+.icons {
+  height: 30px;
+  width: 30px;
+}
+@media screen and (max-width: 1200px) {
+  .footer {
+    height: 40px;
+    padding: 60px 120px;
+  }
+  .icons {
+    height: 20px;
+    width: 20px;
+  }
+  .credits p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .footer {
+    height: 40px;
+    padding: 10px 30px;
+  }
+  .icons {
+    height: 15px;
+    width: 15px;
+  }
+  .credits p {
+    font-size: 10px;
+  }
+}
