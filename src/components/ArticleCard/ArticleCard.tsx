@@ -2,7 +2,7 @@ import React from "react";
 import { Article } from "../../api/articles/types";
 import "./articleCard.css";
 
-const ArticleCard = ({ title, imgUrl, year, text }: Article) => {
+const ArticleCard = ({ title, imgUrl, year, text }: Article): JSX.Element => {
   return (
     <div className="article-card">
       <img src={imgUrl} alt={title} />

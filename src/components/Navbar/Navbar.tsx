@@ -4,7 +4,7 @@ import useMediaQuery from "../../Hooks/useMediaQuery";
 import HamburgerButton from "../HamburgerButton/HamburgerButton";
 import Sidebar from "../Sidebar/Sidebar";
 
-const Navbar = () => {
+const Navbar = (): JSX.Element => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
 
   const { matches } = useMediaQuery({ matchQuery: "(max-width: 900px)" });
@@ -42,8 +42,10 @@ const Navbar = () => {
             <li>
               <a href="#about">Apie</a>
             </li>
+            <li>
+              <a href="#articles">Straipsniai</a>
+            </li>
             <li>Tyrimai</li>
-            <li>Straipsniai</li>
             <li>Knygos</li>
             <li>Kontaktai</li>
           </ul>
@@ -54,8 +56,10 @@ const Navbar = () => {
               <li>
                 <a href="#about">Apie</a>
               </li>
+              <li>
+                <a href="#articles">Straipsniai</a>
+              </li>
               <li>Tyrimai</li>
-              <li>Straipsniai</li>
               <li>Knygos</li>
               <li>Kontaktai</li>
             </ul>

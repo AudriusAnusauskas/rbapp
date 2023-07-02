@@ -23,7 +23,7 @@ function extractFirstTwoSentences(text: string) {
   return displaySentences;
 }
 
-const Articles = () => {
+const Articles = (): JSX.Element => {
   const [sliceValue, setSliceValue] = useState(-3);
 
   useEffect(() => {
@@ -41,18 +41,21 @@ const Articles = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   return (
-    <section className="articles-container">
+    <section className="articles-container" id="articles">
       <h2>Straipsniai</h2>
       <div className="articles">
-        {articles.slice(sliceValue).map((e) => (
-          <ArticleCard
-            key={e.id}
-            title={e.title}
-            imgUrl={e.imgUrl}
-            year={e.year}
-            text={extractFirstTwoSentences(e.text)}
-          />
-        ))}
+        {articles
+          .slice(sliceValue)
+          .reverse()
+          .map((atricle) => (
+            <ArticleCard
+              key={atricle.id}
+              title={atricle.title}
+              imgUrl={atricle.imgUrl}
+              year={atricle.year}
+              text={extractFirstTwoSentences(atricle.text)}
+            />
+          ))}
       </div>
       <div className="more">
         <a href="/">
