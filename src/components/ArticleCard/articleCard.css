@@ -1,0 +1,43 @@
+.article-card {
+  background-color: #ffffff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 300px;
+}
+.article-card-text {
+  padding: 30px;
+}
+.article-card h3 {
+  color: #019eb5;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 3.22px;
+  margin: 0;
+}
+
+.date {
+  color: #019eb5;
+  font-size: 10px;
+  letter-spacing: 3.22px;
+  /* margin: 0; */
+}
+.text {
+  font-size: 12px;
+  font-family: roboto;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 1.2px;
+}
+.read-more {
+  color: #019eb5;
+  cursor: pointer;
+}
+@media screen and (max-width: 1200px) {
+  .article-card {
+    flex-grow: 2;
+  }
+}
