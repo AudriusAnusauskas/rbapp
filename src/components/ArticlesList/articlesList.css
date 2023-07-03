@@ -1,55 +1,53 @@
-.articles-container {
+.articles-list-container {
+  margin: 0 auto;
   color: white;
   background-color: #09090b;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
-  padding: 0 239px;
+  padding: 0 120px;
+  max-width: 1440px;
 }
 .articles {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
-.more {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  color: #019eb5;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 35px;
-  letter-spacing: 3.22px;
+.pagination {
+  padding: 20px 0;
 }
-.more p {
-  margin: 30px 0;
+.pagination span {
+  margin: 0 10px;
+}
+.pagination button {
   cursor: pointer;
+  background-color: #09090b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  transition: background-color 0.3s ease;
 }
 
 @media screen and (max-width: 1200px) {
-  .articles-container {
+  .articles-list-container {
     padding: 30px 120px;
   }
   .articles {
     margin-top: 20px;
-    flex-wrap: wrap;
   }
-  .articles-container h2 {
+  .articles-list-container h2 {
     font-size: 40px;
   }
 }
 @media screen and (max-width: 660px) {
-  .articles-container {
+  .articles-list-container {
     margin: 0 auto;
     padding: 30px;
     max-width: 390px;
   }
-  .articles-container h2 {
+  .articles-list-container h2 {
     font-size: 20px;
     letter-spacing: 7.2px;
-  }
-  .more {
-    font-size: 12px;
-    letter-spacing: 1.5px;
   }
 }

@@ -2,26 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./articles.css";
 import { articles } from "../../data/articles";
 import ArticleCard from "../ArticleCard/ArticleCard";
-
-function extractFirstTwoSentences(text: string) {
-  const sentences = text.split(".").map((sentence) => sentence.trim() + ".");
-
-  let selectedSentences = "";
-  let sentenceCount = 0;
-
-  for (const sentence of sentences) {
-    if (sentenceCount >= 2) {
-      break;
-    }
-
-    selectedSentences += sentence + " ";
-    sentenceCount++;
-  }
-
-  const displaySentences = selectedSentences.trim();
-
-  return displaySentences;
-}
+import { extractFirstTwoSentences } from "../../helpers/extractFirstTwoSentences";
 
 const Articles = (): JSX.Element => {
   const [sliceValue, setSliceValue] = useState(-3);
@@ -58,7 +39,7 @@ const Articles = (): JSX.Element => {
           ))}
       </div>
       <div className="more">
-        <a href="/">
+        <a href="/articles">
           <p>DAUGIAU STRAIPSNIŲ...</p>
         </a>
       </div>

@@ -5,6 +5,7 @@
   flex-direction: column;
   flex: 1;
   min-width: 300px;
+  max-width: 30%;
 }
 .article-card-text {
   padding: 30px;
@@ -39,5 +40,12 @@
 @media screen and (max-width: 1200px) {
   .article-card {
     flex-grow: 2;
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .article-card {
+    flex-grow: 2;
+    max-width: 100%;
   }
 }
