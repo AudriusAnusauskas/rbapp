@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ArticleCard from "../ArticleCard/ArticleCard";
+import { Link } from "react-router-dom";
 import { articles } from "../../data/articles";
 import { extractFirstTwoSentences } from "../../helpers/extractFirstTwoSentences";
 import Navbar from "../Navbar/Navbar";
@@ -23,6 +24,8 @@ const ArticlesList = (): JSX.Element => {
     indexOfFirstArticle,
     indexOfLastArticle
   );
+
+  articles.reverse();
 
   const totalPages = Math.ceil(articles.length / itemsPerPage);
 
@@ -51,15 +54,21 @@ const ArticlesList = (): JSX.Element => {
       <Navbar />
       <section className="articles-list-container">
         <h2>Straipsniai</h2>
-        <div className="articles">
-          {currentArticles.map((atricle) => (
-            <ArticleCard
-              key={atricle.id}
-              title={atricle.title}
-              imgUrl={atricle.imgUrl}
-              year={atricle.year}
-              text={extractFirstTwoSentences(atricle.text)}
-            />
+        <div className="articles-list">
+          {currentArticles.map((article) => (
+            <Link
+              className="article-card"
+              key={article.id}
+              to={`/article/${article.id}`}
+            >
+              <ArticleCard
+                key={article.id}
+                title={article.title}
+                imgUrl={article.imgUrl}
+                year={article.year}
+                text={extractFirstTwoSentences(article.text)}
+              />
+            </Link>
           ))}
         </div>
         <div className="pagination">

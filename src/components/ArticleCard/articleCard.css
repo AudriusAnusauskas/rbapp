@@ -1,11 +1,12 @@
 .article-card {
+  cursor: pointer;
   background-color: #ffffff;
   color: #000;
   display: flex;
   flex-direction: column;
   flex: 1;
   min-width: 300px;
-  max-width: 30%;
+  max-width: 28%;
 }
 .article-card-text {
   padding: 30px;
@@ -39,13 +40,11 @@
 }
 @media screen and (max-width: 1200px) {
   .article-card {
-    flex-grow: 2;
-    max-width: 50%;
+    max-width: 43%;
   }
 }
 @media screen and (max-width: 1200px) {
   .article-card {
-    flex-grow: 2;
     max-width: 100%;
   }
 }

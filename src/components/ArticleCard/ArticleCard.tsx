@@ -4,7 +4,7 @@ import "./articleCard.css";
 
 const ArticleCard = ({ title, imgUrl, year, text }: Article): JSX.Element => {
   return (
-    <div className="article-card">
+    <div>
       <img src={imgUrl} alt={title} />
       <div className="article-card-text">
         <h3>{title}</h3>
