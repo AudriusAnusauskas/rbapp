@@ -1,4 +1,5 @@
 .navbar {
+  margin: 0 auto;
   padding: 0 140px;
   font-family: Oswald;
   max-width: 1440px;
@@ -79,7 +80,7 @@ li:not(:hover) {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .navbar {
     padding: 0 20px;
   }

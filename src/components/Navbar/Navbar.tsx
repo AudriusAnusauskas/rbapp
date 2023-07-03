@@ -25,12 +25,14 @@ const Navbar = (): JSX.Element => {
 
   return (
     <div className="navbar">
-      <div className="logo">
-        <p className="logo-upper">
-          Ramunė<span>Balevičiūtė</span>
-        </p>
-        <p className="logo-lower">Teatro kritikė</p>
-      </div>
+      <a href="/">
+        <div className="logo">
+          <p className="logo-upper">
+            Ramunė<span>Balevičiūtė</span>
+          </p>
+          <p className="logo-lower">Teatro kritikė</p>
+        </div>
+      </a>
       <div className="menu">
         {matches ? (
           <HamburgerButton
@@ -40,7 +42,7 @@ const Navbar = (): JSX.Element => {
         ) : (
           <ul>
             <li>
-              <a href="#about">Apie</a>
+              <a href="/#about">Apie</a>
             </li>
             <li>
               <a href="#articles">Straipsniai</a>
@@ -54,7 +56,7 @@ const Navbar = (): JSX.Element => {
           <Sidebar onBackdropClick={closeSidebar}>
             <ul className="menu-sidebar">
               <li>
-                <a href="#about">Apie</a>
+                <a href="/#about">Apie</a>
               </li>
               <li>
                 <a href="#articles">Straipsniai</a>
