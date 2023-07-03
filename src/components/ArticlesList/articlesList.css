@@ -9,8 +9,9 @@
   padding: 0 120px;
   max-width: 1440px;
 }
-.articles {
+.articles-list {
   display: flex;
+  /* justify-content: space-between; */
   flex-wrap: wrap;
   gap: 30px;
 }

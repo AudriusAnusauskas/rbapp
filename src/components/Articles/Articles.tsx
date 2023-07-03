@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./articles.css";
 import { articles } from "../../data/articles";
 import ArticleCard from "../ArticleCard/ArticleCard";
@@ -28,14 +29,20 @@ const Articles = (): JSX.Element => {
         {articles
           .slice(sliceValue)
           .reverse()
-          .map((atricle) => (
-            <ArticleCard
-              key={atricle.id}
-              title={atricle.title}
-              imgUrl={atricle.imgUrl}
-              year={atricle.year}
-              text={extractFirstTwoSentences(atricle.text)}
-            />
+          .map((article) => (
+            <Link
+              className="article-card"
+              key={article.id}
+              to={`/article/${article.id}`}
+            >
+              <ArticleCard
+                key={article.id}
+                title={article.title}
+                imgUrl={article.imgUrl}
+                year={article.year}
+                text={extractFirstTwoSentences(article.text)}
+              />
+            </Link>
           ))}
       </div>
       <div className="more">
