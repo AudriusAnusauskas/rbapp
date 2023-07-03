@@ -42,10 +42,10 @@ const Navbar = (): JSX.Element => {
         ) : (
           <ul>
             <li>
-              <a href="/#about">Apie</a>
+              <a href="/about">Apie</a>
             </li>
             <li>
-              <a href="#articles">Straipsniai</a>
+              <a href="/articles">Straipsniai</a>
             </li>
             <li>Tyrimai</li>
             <li>Knygos</li>
@@ -56,10 +56,10 @@ const Navbar = (): JSX.Element => {
           <Sidebar onBackdropClick={closeSidebar}>
             <ul className="menu-sidebar">
               <li>
-                <a href="/#about">Apie</a>
+                <a href="/about">Apie</a>
               </li>
               <li>
-                <a href="#articles">Straipsniai</a>
+                <a href="/articles">Straipsniai</a>
               </li>
               <li>Tyrimai</li>
               <li>Knygos</li>
