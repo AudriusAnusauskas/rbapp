@@ -25,6 +25,8 @@ const ArticlesList = (): JSX.Element => {
     indexOfLastArticle
   );
 
+  articles.reverse();
+
   const totalPages = Math.ceil(articles.length / itemsPerPage);
 
   const handleFirstPage = () => {
