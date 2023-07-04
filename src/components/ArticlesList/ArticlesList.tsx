@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ArticleCard from "../ArticleCard/ArticleCard";
 import { Link } from "react-router-dom";
-import { articles } from "../../data/articles";
+import { articlesReversed } from "../../helpers/reverse";
 import { extractFirstTwoSentences } from "../../helpers/extractFirstTwoSentences";
 import Navbar from "../Navbar/Navbar";
 import "./articlesList.css";
@@ -20,14 +20,12 @@ const ArticlesList = (): JSX.Element => {
   const indexOfLastArticle = currentPage * itemsPerPage;
   const indexOfFirstArticle = indexOfLastArticle - itemsPerPage;
 
-  const currentArticles = articles.slice(
+  const currentArticles = articlesReversed.slice(
     indexOfFirstArticle,
     indexOfLastArticle
   );
 
-  articles.reverse();
-
-  const totalPages = Math.ceil(articles.length / itemsPerPage);
+  const totalPages = Math.ceil(articlesReversed.length / itemsPerPage);
 
   const handleFirstPage = () => {
     setCurrentPage(1);
