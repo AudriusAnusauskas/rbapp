@@ -1,11 +1,12 @@
-import axios, { AxiosResponse } from "axios";
-
 import { BASE_API_URL } from "./constants";
 
-// export function get<T>(url: string): Promise<AxiosResponse<T>> {
-//   return axios.get<T>(`${BASE_API_URL}/${url}`);
-// }
-
-export function get<T>(url: string): Promise<AxiosResponse<T>> {
-  return axios.get<T>(`${BASE_API_URL}/${url}`);
-}
+export const fetchArticlesData = async (endpointUrl: string) => {
+  try {
+    const response = await fetch(`${BASE_API_URL}/${endpointUrl}`);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return [];
+  }
+};

@@ -6,7 +6,7 @@
   flex-direction: column;
   flex: 1;
   min-width: 300px;
-  max-width: 28%;
+  max-width: fit-content;
 }
 .article-card-text {
   padding: 30px;
@@ -37,14 +37,4 @@
 .read-more {
   color: #019eb5;
   cursor: pointer;
-}
-@media screen and (max-width: 1200px) {
-  .article-card {
-    max-width: 43%;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .article-card {
-    max-width: 100%;
-  }
 }
