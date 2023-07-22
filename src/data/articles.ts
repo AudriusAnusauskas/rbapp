@@ -968,3 +968,22 @@ export const articles = [
     photoAuthor: "Arturas Svorobovičius",
   },
 ];
+// import axios, { AxiosResponse } from "axios";
+
+// export const articles = async () => {
+//   await axios.get(`http://localhost:8080/api/v1/articles`);
+// };
+
+// console.log(articles);
+
+// const fetchData = async () => {
+//   try {
+//     const response = await fetch("http://localhost:8080/api/v1/articles");
+//     const data = await response.json();
+//     return data;
+//   } catch (error) {
+//     console.error("Error fetching data:", error);
+//   }
+// };
+
+// export const art = fetchData();

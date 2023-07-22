@@ -1,5 +1,6 @@
 export type Article = {
-  id?: number;
+  id?: any;
+  articleId?: number;
   title?: string;
   publicationTitle?: string;
   location?: string;
