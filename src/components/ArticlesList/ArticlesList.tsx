@@ -46,7 +46,7 @@ const ArticlesList = (): JSX.Element => {
           {currentItems.map((article: Article) => (
             <Link
               className="article-card"
-              key={article.articleId}
+              key={article.id}
               to={`/article/${article.articleId}`}
             >
               <ArticleCard

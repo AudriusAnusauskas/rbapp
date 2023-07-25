@@ -1,5 +1,4 @@
 import axios from "axios";
-import api from "../../api/axiosConfig";
 import { BASE_API_URL } from "../shared/constants";
 
 export const fetchArticle = async (articleId: number) => {

@@ -13,22 +13,26 @@ const usePagination = (itemsPerPage: number, data: Article[]) => {
 
   const handleFirstPage = () => {
     setCurrentPage(1);
+    // window.scrollTo(0, 0);
   };
 
   const handleNextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
+      window.scrollTo(0, 0);
     }
   };
 
   const handlePreviousPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
+      window.scrollTo(0, 0);
     }
   };
 
   const handleLastPage = () => {
     setCurrentPage(totalPages);
+    // window.scrollTo(0, 0);
   };
 
   return {

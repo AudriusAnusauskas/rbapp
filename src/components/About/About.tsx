@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./about.css";
 
 const About = () => {
+  // const aboutRef = useRef(null);
+
+  // const handleNavClick = (ref: {
+  //   current: { scrollIntoView: (arg0: { behavior: string }) => void };
+  // }) => {
+  //   ref.current.scrollIntoView({ behavior: "smooth" });
+  // };
+
   return (
     <section className="about" id="about">
       <h2>Apie</h2>
