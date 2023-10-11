@@ -1,47 +1,37 @@
+import React from "react";
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
+import { getArticle } from "../../api/articles/getArticle";
 import "./articleDetailed.css";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-import { Article } from "../../api/articles/types";
-import { fetchArticle } from "../../api/articles/fetchArticle";
 
 const ArticleDetailed = (): JSX.Element => {
-  const { articleId } = useParams<{ articleId: string }>();
-
-  const { data, isLoading, isError } = useQuery<Article>(
-    ["article", articleId],
-    () => fetchArticle(Number(articleId))
-  );
-
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (isError) {
-    return <div>Error</div>;
-  }
-
-  if (!data) {
-    return <div>No article found.</div>;
-  }
+  const routeParams = useParams<"id">();
+  const id = routeParams.id ? parseInt(routeParams.id) : 1;
+  const data = useQuery("article", () => getArticle(id));
+  console.log(data.data);
 
   return (
     <>
       <Navbar />
       <div className="article-container">
-        <img src={data.imgUrl} alt="" />
-        <p className="photo-author">Nuotrauka: {data.photoAuthor}</p>
+        <img src={data.data?.imgUrl} alt="" />
+        <p className="photo-author">Nuotrauka: {data.data?.photoAuthor}</p>
         <div className="article-text-container">
-          <h2>{data.title}</h2>
+          <h2>{data.data?.title}</h2>
           <p className="publication">
             Publikuota{" "}
-            <a className="publication-link" target="blank" href={data.url}>
-              {data.publicationTitle}
+            <a
+              className="publication-link"
+              target="blank"
+              href={data.data?.url}
+            >
+              {data.data?.publicationTitle}
             </a>
-            , {data.year}
+            , {data.data?.year}
           </p>
-          <p className="text article-text">{data.text}</p>
+          <p className="text article-text">{data.data?.text}</p>
         </div>
       </div>
       <Footer />

@@ -1,5 +1,7 @@
+import React, { useState } from "react";
 import ArticleCard from "../ArticleCard/ArticleCard";
 import { Link } from "react-router-dom";
+import { articlesReversed } from "../../helpers/reverse";
 import { extractFirstTwoSentences } from "../../helpers/extractFirstTwoSentences";
 import Navbar from "../Navbar/Navbar";
 import "./articlesList.css";
@@ -10,32 +12,40 @@ import {
   HiChevronDoubleLeft,
   HiChevronDoubleRight,
 } from "react-icons/hi";
-import useArticleData from "../../Hooks/useArticleData";
-import usePagination from "../../Hooks/usePagination";
-import { Article } from "../../api/articles/types";
-import { useEffect, useState } from "react";
 
 const ArticlesList = (): JSX.Element => {
-  const initialArticles = useArticleData();
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(12);
 
-  const [articles, setArticles] = useState<Article[]>([]);
+  const indexOfLastArticle = currentPage * itemsPerPage;
+  const indexOfFirstArticle = indexOfLastArticle - itemsPerPage;
 
-  useEffect(() => {
-    if (initialArticles) {
-      const reversedData = initialArticles.slice().reverse();
-      setArticles(reversedData);
+  const currentArticles = articlesReversed.slice(
+    indexOfFirstArticle,
+    indexOfLastArticle
+  );
+
+  const totalPages = Math.ceil(articlesReversed.length / itemsPerPage);
+
+  const handleFirstPage = () => {
+    setCurrentPage(1);
+  };
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
     }
-  }, [initialArticles]);
+  };
 
-  const {
-    currentPage,
-    currentItems,
-    totalPages,
-    handleFirstPage,
-    handleNextPage,
-    handlePreviousPage,
-    handleLastPage,
-  } = usePagination(12, articles);
+  const handlePreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const handleLastPage = () => {
+    setCurrentPage(totalPages);
+  };
 
   return (
     <div>
@@ -43,18 +53,18 @@ const ArticlesList = (): JSX.Element => {
       <section className="articles-list-container">
         <h2>Straipsniai</h2>
         <div className="articles-list">
-          {currentItems.map((article: Article) => (
+          {currentArticles.map((article: any) => (
             <Link
               className="article-card"
               key={article.id}
-              to={`/article/${article.articleId}`}
+              to={`/article/${article.id}`}
             >
               <ArticleCard
                 key={article.id}
                 title={article.title}
                 imgUrl={article.imgUrl}
                 year={article.year}
-                text={extractFirstTwoSentences(article.text as string)}
+                text={extractFirstTwoSentences(article.text)}
               />
             </Link>
           ))}
